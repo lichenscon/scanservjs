@@ -83,7 +83,7 @@ It supports any
     --volume /var/run/dbus:/var/run/dbus \
     --restart unless-stopped \
     --name scanservjs-container \
-    --privileged sbs20/scanservjs:latest
+    --privileged ghcr.io/lichenscon/scanservjs:master
   ```
 
 ## Documentation
