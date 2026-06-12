@@ -80,7 +80,7 @@ ENTRYPOINT [ "/entrypoint.sh" ]
 
 # Copy the code and install
 COPY --from=scanservjs-build "/app/debian/scanservjs_*.deb" "/"
-RUN apt-get install ./scanservjs_*.deb curl \
+RUN apt-get install-y curl && apt-get install ./scanservjs_*.deb \
   && rm -f ./scanservjs_*.deb
 
 WORKDIR /usr/lib/scanservjs
